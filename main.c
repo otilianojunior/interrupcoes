@@ -17,7 +17,7 @@
 #define BOTAO_B_PIN 6
 #define NUM_LEDS 25
 #define WS2812_PIN 7
-#define TEMPO_DEBOUNCE_MS 500
+#define TEMPO_DEBOUNCE_MS 400
 #define BRILHO_LED 51
 
 // =============================================
@@ -32,7 +32,7 @@ typedef struct {
 typedef CorLed MatrizLed[5][5];
 
 // =============================================
-//          PROTÓTIPOS DE FUNÇÕES
+//          FUNÇÕES
 // =============================================
 uint32_t cor_para_grb(double vermelho, double verde, double azul);
 void atualizar_matriz_led(MatrizLed config, PIO pio, uint sm);
@@ -110,7 +110,7 @@ void exibir_numero(int numero, PIO pio, uint sm) {
         for (int coluna = 0; coluna < 5; coluna++) {
             if (padroes_digitos[numero][linha][coluna]) {
                 // Acende apenas o canal vermelho
-                matriz[linha][coluna] = (CorLed){0, BRILHO_LED / 255.0, 0};
+                matriz[linha][coluna] = (CorLed){BRILHO_LED / 255.0, 0, 0};
             } else {
                 matriz[linha][coluna] = (CorLed){0, 0, 0};
             }

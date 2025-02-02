@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="assets/logo.jpeg" alt="Logo do Projeto" width="50%">
+</p>
 
 ---
 
@@ -6,6 +9,7 @@
 ## 📋 Descrição Geral
 
 Este projeto tem como objetivo consolidar a compreensão dos conceitos relacionados ao uso de **interrupções** no microcontrolador **RP2040**, explorando as funcionalidades da placa de desenvolvimento **BitDogLab**. Ao longo do desenvolvimento, você aplicará técnicas essenciais como:
+
 - **Interrupções via IRQ**
 - **Debouncing** dos botões
 - Controle de **LEDs comuns** (como o LED RGB)
@@ -28,20 +32,17 @@ A proposta integra hardware e software para criar uma aplicação interativa e f
 
 ## 🛠 Componentes Utilizados
 
-- **Matriz 5x5 de LEDs WS2812 (endereçáveis):**  
-  - **GPIO:** Conectada à GPIO 7.  
+- **Matriz 5x5 de LEDs WS2812 (endereçáveis):**
+  - **GPIO:** Conectada à GPIO 7.
   - **Função:** Exibe números de 0 a 9 com efeitos visuais.
-  
-- **LED RGB Comum:**  
-  - **GPIOs:** Conectado às GPIOs 11 (vermelho), 12 (verde) e 13 (azul).  
+- **LED RGB Comum:**
+  - **GPIOs:** Conectado às GPIOs 11 (verde), 12 (azul) e 13 (vermelho).
   - **Função:** O LED vermelho deve piscar continuamente 5 vezes por segundo.
-  
-- **Botão A:**  
-  - **GPIO:** Conectado à GPIO 5.  
+- **Botão A:**
+  - **GPIO:** Conectado à GPIO 5.
   - **Função:** Incrementa o número exibido na matriz a cada pressionamento.
-  
-- **Botão B:**  
-  - **GPIO:** Conectado à GPIO 6.  
+- **Botão B:**
+  - **GPIO:** Conectado à GPIO 6.
   - **Função:** Decrementa o número exibido na matriz a cada pressionamento.
 
 ---
@@ -50,6 +51,10 @@ A proposta integra hardware e software para criar uma aplicação interativa e f
 
 ```plaintext
 Interrupcoes/
+├── assets
+│   ├── logo.jpeg
+│   └── placa.gif
+│   └── wokwi.gif
 ├── wokwi
 │   ├── diagram.json
 │   └── wokwi.toml
@@ -65,22 +70,25 @@ Interrupcoes/
 
 ## 🚀 Funcionalidades do Projeto
 
-1. **LED RGB – Piscar Vermelho:**  
+1. **LED RGB – Piscar Vermelho:**
+
    - O LED vermelho pisca continuamente com uma frequência de 5 vezes por segundo, servindo como indicação visual do funcionamento.
 
-2. **Interrupções e Debouncing nos Botões:**  
-   - **Botão A:** Incrementa o valor exibido na matriz de LEDs sempre que pressionado.  
-   - **Botão B:** Decrementa o valor exibido na matriz de LEDs sempre que pressionado.  
+2. **Interrupções e Debouncing nos Botões:**
+
+   - **Botão A:** Incrementa o valor exibido na matriz de LEDs sempre que pressionado.
+   - **Botão B:** Decrementa o valor exibido na matriz de LEDs sempre que pressionado.
    - **Debouncing:** Implementado via software para eliminar o efeito do bouncing, garantindo leituras precisas.
 
-3. **Exibição na Matriz WS2812:**  
-   - Os LEDs endereçáveis exibem números de 0 a 9 com efeitos visuais.  
+3. **Exibição na Matriz WS2812:**
+
+   - Os LEDs endereçáveis exibem números de 0 a 9 com efeitos visuais.
    - O formato pode ser fixo (ex.: estilo digital com segmentos iluminados) ou criativo, desde que o número seja claramente identificado.
 
-4. **Demonstração:**  
+4. **Demonstração:**
    - A simulação foi feita na pasta wokwi, após compilar o projeto pode ser executado o arquivo diagram.json para para visualizar o comportamento do projeto de interrupções.
 
-> *Observação:* O diagrama original da matriz de LEDs foi adaptado a partir do repositório do professor [Wilton Lacerda Silva](https://github.com/wiltonlacerda) e modificado para esta atividade.
+> _Observação:_ O diagrama original da matriz de LEDs foi adaptado a partir do repositório do professor [Wilton Lacerda Silva](https://github.com/wiltonlacerda) e modificado para esta atividade.
 
 ---
 
@@ -124,18 +132,25 @@ Após a compilação, copie o arquivo `.uf2` gerado para o Raspberry Pi Pico (ce
 ### 4. Testes
 
 - **Simulação no Wokwi:**  
-  Utilize a plataforma [Wokwi](https://wokwi.com/projects/420549512857480193) para testar e simular o comportamento do projeto antes de implementá-lo fisicamente.
+ Utilizando a plataforma [Wokwi](https://wokwi.com/projects/420549512857480193) é possível testar o código.
 
-
-- **Execução na placa RP2040 - BitDogLab:**  
-  Utilize a plataforma [Wokwi](https://wokwi.com/projects/420549512857480193) para testar e simular o comportamento do projeto antes de implementá-lo fisicamente.
+  <p align="center">
+  <img src="assets/wokwi.gif" alt="Simulação no Wokwi">
+</p>
 
 ---
 
-##  Entregáveis
+- **Execução na placa RP2040 - BitDogLab:**  
+  <p align="center">
+  <img src="assets/placa.gif" alt="Execução na Placa RP2040 - BitDogLab">
+</p>
+
+---
+
+## 📁 Entregáveis
 
 - Código-fonte presente neste repositório.
-- Vídeo demonstrativo: [Vídeo](https://drive.google.com) *(link para o vídeo demonstrativo)*
+- Vídeo demonstrativo: [Vídeo](https://drive.google.com/file/d/10bey8MsrKD87hNsXohAC1H6DWAOKdtKM/view?usp=sharing)
 
 ---
 
@@ -145,6 +160,6 @@ Este projeto é uma excelente oportunidade para praticar conceitos fundamentais 
 
 ---
 
-*Desenvolvido por Otiliano Junior*  
+_Desenvolvido por Otiliano Junior_
 
 ---

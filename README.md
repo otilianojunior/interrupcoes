@@ -1,10 +1,16 @@
-<p align="center">
-  <img src="assets/logo.jpeg" alt="Logo do Projeto" width="50%">
-</p>
 
 ---
+<table>
+  <tr>
+    <td>
+      <img src="assets/logo.jpeg" alt="Logo do Projeto" width="150">
+    </td>
+    <td>
+      <h1>💡 Projeto: Interrupções com RP2040 e BitDogLab</h1>
+    </td>
+  </tr>
+</table>
 
-# 💡 Projeto: Interrupções com RP2040 e BitDogLab
 
 ## 📋 Descrição Geral
 
